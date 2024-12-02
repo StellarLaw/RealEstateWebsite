@@ -40,7 +40,7 @@ JOIN Firm F ON A.firmId = F.id;
 SELECT P.address, P.price
 FROM Property P
 JOIN Listings L ON P.address = L.address
-WHERE L.agentId = 3; -- Replace 103 with desired agent id.
+WHERE L.agentId = 3; 
 
 -- 8) Find all Agent.name-Buyer.name pairs where the buyer works with the agent, sorted alphabetically by Agent.name.
 SELECT A.name AS agent_name, B.name AS buyer_name
@@ -59,7 +59,7 @@ GROUP BY A.agentId;
 SELECT P.address, P.price
 FROM Property P
 JOIN House H ON P.address = H.address
-JOIN Buyer B ON B.id = 3 -- Replace 3 with desired buyer id
+JOIN Buyer B ON B.id = 3
 WHERE B.propertyType = 'House' 
   AND H.bedrooms = B.bedrooms 
   AND H.bathrooms = B.bathrooms 
